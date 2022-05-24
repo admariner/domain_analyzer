@@ -59,6 +59,7 @@ Crawler function allows to crawl a entire site. It obtain the source of the main
 search for links in it. Actually only detect HREF links. See -h option to get a full list of options.
 """
 
+
 # standar imports
 import sys
 import re
@@ -140,24 +141,25 @@ splitters = ['Javascript:','javascript:','feed:','feed=','#','mms:','file:','cid
 
 # HTTP Response Codes
 # -------------------
-error_codes={}
-error_codes['200']='200 OK'
-error_codes['300']='300 Multiple Choices'
-error_codes['301']='301 Moved Permanently'
-error_codes['302']='Moved'
-error_codes['305']='305 Use Proxy'
-error_codes['307']='307 Temporary Redirect'
-error_codes['400']='400 Bad Request'
-error_codes['401']='401 Unauthorized'
-error_codes['403']='403 Forbidden'
-error_codes['404']='404 Not Found'
-error_codes['405']='405 Method Not Allowed'
-error_codes['407']='407 Proxy Authentication Required'
-error_codes['408']='408 Request Timeout'
-error_codes['500']='500 Internal Server Error'
-error_codes['503']='503 Service Unavailable'
-error_codes['504']='504 Gateway Timeout'
-error_codes['505']='505 HTTP Version Not Supported'
+error_codes = {
+    '200': '200 OK',
+    '300': '300 Multiple Choices',
+    '301': '301 Moved Permanently',
+    '302': 'Moved',
+    '305': '305 Use Proxy',
+    '307': '307 Temporary Redirect',
+    '400': '400 Bad Request',
+    '401': '401 Unauthorized',
+    '403': '403 Forbidden',
+    '404': '404 Not Found',
+    '405': '405 Method Not Allowed',
+    '407': '407 Proxy Authentication Required',
+    '408': '408 Request Timeout',
+    '500': '500 Internal Server Error',
+    '503': '503 Service Unavailable',
+    '504': '504 Gateway Timeout',
+    '505': '505 HTTP Version Not Supported',
+}
 
 
 # End of global variables
